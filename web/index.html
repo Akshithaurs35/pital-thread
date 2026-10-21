@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern women's dresses boutique demo store." />
+  <title>Petal & Thread | Women's Dresses</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">A little something lovely — free shipping on orders over ₹1,999</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Petal and Thread home"><span class="brand-mark">P</span><span>petal <i>&</i> thread</span></a>
+    <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Find your perfect dress..." aria-label="Search dresses" /></label>
+    <nav class="header-actions" aria-label="Shopping actions">
+      <button class="nav-button" id="wishlistNav" title="View wishlist">♡ <span class="nav-label">Wishlist</span> <b id="wishlistCount">0</b></button>
+      <button class="nav-button cart-nav" id="cartNav" title="View cart">🛍 <span class="nav-label">Bag</span> <b id="cartCount">0</b></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">MADE FOR YOUR MOMENTS</span>
+        <h1>Wear what<br /><em>feels like you.</em></h1>
+        <p>Easy everyday dresses, dreamy florals, and occasion-ready favourites — find the pieces that make you feel wonderful.</p>
+        <button class="primary-button" id="shopNow">Explore dresses <span>→</span></button>
+        <div class="hero-proof"><span>★★★★★</span> Thoughtfully chosen styles, just for you</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Women's fashion mood board">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85" alt="Women's fashion clothing collection" />
+        <div class="hero-sticker">YOUR<br/>NEW<br/>FAVOURITE</div>
+        <div class="floating-note"><span>✿</span><div><b>Lovely layers</b><small>New season edit</small></div></div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Store benefits">
+      <div><span class="benefit-icon">♡</span><div><b>Styles to love</b><small>Picked with care</small></div></div>
+      <div><span class="benefit-icon">↩</span><div><b>Easy returns</b><small>7-day demo policy</small></div></div>
+      <div><span class="benefit-icon">🚚</span><div><b>Free shipping</b><small>Orders over ₹1,999</small></div></div>
+      <div><span class="benefit-icon">✦</span><div><b>Feel-good fashion</b><small>For every day</small></div></div>
+    </section>
+
+    <section class="catalog-section" id="collection">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE DRESS EDIT</span><h2>Dresses you'll reach for</h2><p>From slow mornings to special plans.</p></div>
+        <div class="catalog-controls">
+          <select id="categoryFilter" aria-label="Filter dresses"><option value="all">All dresses</option><option value="Floral">Floral</option><option value="Everyday">Everyday</option><option value="Occasion">Occasion</option><option value="Maxi">Maxi</option><option value="Midi">Midi</option></select>
+          <select id="sortFilter" aria-label="Sort dresses"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="empty-state hidden" id="emptyState">No dresses found. Try a different search.</p>
+    </section>
+
+    <section class="style-note">
+      <span class="eyebrow">A NOTE FROM US</span>
+      <h2>Lovely clothes. <em>Lovely you.</em></h2>
+      <p>Choose the dress that fits your mood, make it your own, and enjoy every moment in it.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">P</span><span>petal <i>&</i> thread</span></a><p>A women's dress boutique demo created for learning and practice.</p><div class="footer-links"><a href="#collection">Dresses</a><a href="#collection">Our story</a><a href="#collection">Help</a></div><small>© 2026 Petal & Thread. Demo store — no real payments are collected.</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <aside class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true">
+    <section class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header"><div><span class="eyebrow">YOUR LITTLE COLLECTION</span><h2 id="drawerTitle">Shopping bag <span id="drawerCount">(0 items)</span></h2></div><button class="icon-button" id="closeDrawer" aria-label="Close bag">✕</button></div>
+      <div class="drawer-items" id="drawerItems"></div>
+      <div class="drawer-bottom" id="drawerBottom">
+        <div class="shipping-progress"><div class="shipping-copy" id="shippingCopy">You're ₹1,999 away from free shipping</div><div class="progress-track"><span id="shippingProgress"></span></div></div>
+        <div class="subtotal-row"><span>Subtotal</span><b id="cartSubtotal">₹0</b></div>
+        <p class="tax-note">Taxes and delivery calculated at checkout.</p>
+        <button class="primary-button checkout-button" id="checkoutButton">Continue to checkout <span>→</span></button>
+        <p class="demo-note">Demo only: no payments are processed.</p>
+      </div>
+    </section>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
